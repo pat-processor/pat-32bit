@@ -1,0 +1,20 @@
+
+
+# LEF File for Accumulated Process Antenna Effects at the Boundary Pins
+# *********************************************************************
+
+VERSION 5.5 ;
+NAMESCASESENSITIVE ON ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+
+MACRO pads 
+  PIN pad_vdd_1v8_all 
+  END pad_vdd_1v8_all
+  PIN pad_gnd_all 
+  END pad_gnd_all
+  PIN pad_imem_in 
+  END pad_imem_in
+END pads
+
+END LIBRARY

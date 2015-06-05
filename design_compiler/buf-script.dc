@@ -1,0 +1,24 @@
+set link_library {"*" "/home/staff/simon/linux/pat/patternbuf/h18_CORELIB_HV_TYP.db" "/home/staff/simon/linux/pat/patternbuf/h18_IOLIB_HV_TYP.db"}
+set target_library {"/home/staff/simon/linux/pat/patternbuf/h18_CORELIB_HV_TYP.db" "/home/staff/simon/linux/pat/patternbuf/h18_IOLIB_HV_TYP.db"}
+remove_design -designs
+analyze -library WORK -format sverilog {patternbuffer.v patternbuf.v buffers.v}
+elaborate partternbuffer -architecture verilog -library WORK
+check_design
+create_clock -name "clk" -period 1 -waveform { 0 0.5  }  { clk  }
+# below removes register merging from entire design
+# set_attribute [get_designs digital] compile_enable_register_merging false
+# set compile_enable_register_merging false
+#set_register_merging <name> false
+#  below enables re-timing. use with -retime flag on compile_ultra
+# set_optimize_registers [get_designs digital]
+# balance_buffer
+# balance_registers
+#set_dont_touch reset
+#set_ideal_network reset
+set_fanout_load 2 [get_ports "tweak*"]
+set_fanout_load 2 [get_ports "n_drive*"]
+set_fanout_load 2 [get_ports "p_drive*"]
+# set_load <NF?>
+
+compile_ultra
+

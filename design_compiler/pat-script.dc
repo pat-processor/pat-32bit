@@ -1,0 +1,32 @@
+set link_library {"*" "/home/staff/simon/linux/pat/patternbuf/h18_CORELIB_HV_TYP.db" "/home/staff/simon/linux/pat/patternbuf/h18_IOLIB_HV_TYP.db"}
+set target_library {"/home/staff/simon/linux/pat/patternbuf/h18_CORELIB_HV_TYP.db" "/home/staff/simon/linux/pat/patternbuf/h18_IOLIB_HV_TYP.db"}
+remove_design -designs
+analyze -library WORK -format sverilog {/home/staff/simon/linux/pat/patternbuf/pat.sv /home/staff/simon/linux/pat/patternbuf/digital.sv /home/staff/simon/linux/pat/patternbuf/pads.v}
+elaborate pads -architecture verilog -library WORK
+check_design
+create_clock -name "clk" -period 1 -waveform { 0 0.5  }  { clk  }
+create_clock -name "input_clock" -period 10 -waveform {0 5} {pad_modesel_1}
+#set_multicycle_path 2 -from theCore/iBuffer/imem_read_adr* -to theCore/iBuffer/i_buffer_reg*
+set_multicycle_path 2 -from theCore/thePAT/thePC/pc_out_reg* -to theCore/iBuffer/i_buffer_reg*
+# below removes register merging from entire design
+# set_attribute [get_designs digital] compile_enable_register_merging false
+optimize_merge_flops false
+#set_register_merging <name> false
+#  below enables re-timing. use with -retime flag on compile_ultra
+# set_optimize_registers [get_designs digital]
+# balance_buffer
+# balance_registers
+set_dont_touch reset
+set_dont_touch iopad_*
+set_ideal_network reset
+#compile_ultra -retime
+compile_ultra
+
+# set_fanout_load 2 [get_ports "tweak*"]
+# set_load <NF?>
+
+
+#dc shell -t
+# include <script name>
+# or 
+#dc shell -f <script name>

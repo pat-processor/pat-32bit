@@ -1,0 +1,92 @@
+
+Design Name
+===========
+    pat
+
+Scan Style
+==========
+    muxed_scan
+Design has a valid DFT rule check status
+
+Global Constraints
+==================
+    Minimum number of scan chains: no_value
+    Maximum length of scan chains: no_value
+    Lock-up element type: preferred_level_sensitive
+    Mix clock edges in scan chain: false
+    Prefix for unnamed scan objects: SCAN_
+
+Test signal objects
+===================
+    shift_enable: 
+          object name: inputs[0][0] 
+          pin name: inputs[0][0] 
+          hookup_pin: inputs[0][0] 
+          hookup_polarity: non_inverted 
+          active: high 
+          ideal: true 
+          user defined: true
+
+
+Test clock objects
+==================
+    test_clock:
+          object name: scan_clock 
+          test_clock_domain: scan_clock 
+          user defined: true 
+          source: clk  
+          root source: clk  
+          root source polarity: non_inverting
+          hookup_pin: clk 
+          period: 2000.0
+
+
+DFT controllable objects
+========================
+
+DFT don't scan objects
+======================
+    Instance: data_out_reg[0]
+    Instance: data_out_reg[10]
+    Instance: data_out_reg[11]
+    Instance: data_out_reg[12]
+    Instance: data_out_reg[13]
+    Instance: data_out_reg[14]
+    Instance: data_out_reg[15]
+    Instance: data_out_reg[16]
+    Instance: data_out_reg[17]
+    Instance: data_out_reg[18]
+    Instance: data_out_reg[19]
+    Instance: data_out_reg[1]
+    Instance: data_out_reg[20]
+    Instance: data_out_reg[21]
+    Instance: data_out_reg[22]
+    Instance: data_out_reg[23]
+    Instance: data_out_reg[24]
+    Instance: data_out_reg[25]
+    Instance: data_out_reg[26]
+    Instance: data_out_reg[27]
+    Instance: data_out_reg[28]
+    Instance: data_out_reg[29]
+    Instance: data_out_reg[2]
+    Instance: data_out_reg[30]
+    Instance: data_out_reg[31]
+    Instance: data_out_reg[3]
+    Instance: data_out_reg[4]
+    Instance: data_out_reg[5]
+    Instance: data_out_reg[6]
+    Instance: data_out_reg[7]
+    Instance: data_out_reg[8]
+    Instance: data_out_reg[9]
+
+DFT abstract don't scan objects
+===============================
+
+DFT scan segment constraints
+============================
+
+DFT scan chain constraints
+==========================
+
+DFT actual scan chains
+======================

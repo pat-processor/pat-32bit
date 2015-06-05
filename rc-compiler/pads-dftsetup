@@ -1,0 +1,87 @@
+
+Design Name
+===========
+    pads
+
+Scan Style
+==========
+    muxed_scan
+Design has a valid DFT rule check status
+
+Global Constraints
+==================
+    Minimum number of scan chains: no_value
+    Maximum length of scan chains: no_value
+    Lock-up element type: preferred_level_sensitive
+    Mix clock edges in scan chain: false
+    Prefix for unnamed scan objects: SCAN_
+
+Test signal objects
+===================
+    shift_enable: 
+          object name: pad_scan_enable 
+          pin name: pad_scan_enable 
+          hookup_pin: iopad_scan_enable/Y 
+          hookup_polarity: non_inverted 
+          active: high 
+          ideal: true 
+          user defined: true
+
+
+Test clock objects
+==================
+    test_clock:
+          object name: scan_clock 
+          test_clock_domain: scan_clock 
+          user defined: true 
+          source: pad_clock_in  
+          root source: pad_clock_in  
+          root source polarity: non_inverting
+          hookup_pin: iopad_clock_in/Y 
+          period: 2000.0
+
+
+DFT controllable objects
+========================
+
+DFT don't scan objects
+======================
+
+DFT abstract don't scan objects
+===============================
+
+DFT scan segment constraints
+============================
+
+DFT scan chain constraints
+==========================
+    User Chain: 
+          object name: scan_chain_1 
+          scan-in: iopad_inputs/Y 
+          scan-in hookup_pin: none
+          scan-out: iopad_output/A 
+          scan-out hookup_pin: none
+          shared out: true 
+          shift_enable object name:  
+          max length: no_value
+          complete: false
+          test_clock domain: scan_clock
+          test_clock edge: any
+
+
+DFT actual scan chains
+======================
+    Actual Chain:
+          object name: scan_chain_1 
+          scan-in: iopad_inputs/Y 
+          scan-in hookup_pin: none 
+          scan-out: iopad_output/A 
+          scan-out hookup_pin: none 
+          shared out: true
+          shift_enable: pad_scan_enable 
+          length: 705
+          segment objects: none
+          analyzed: false
+          test_clock domain: scan_clock
+          test_clock edge: rise
+

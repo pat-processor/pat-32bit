@@ -1,0 +1,388 @@
+######################################################################
+
+# Created by Encounter(R) RTL Compiler v11.20-s017_1 on Thu Jan 29 22:04:22 +0000 2015
+
+# This file contains the RC script for /designs/pat
+
+######################################################################
+
+set_attribute -quiet information_level 2 /
+set_attribute -quiet gui_auto_update false /
+set_attribute -quiet lib_search_path /home/research/software/asic/kits/ams/H18/liberty/h18_1.8V /
+set_attribute -quiet hdl_track_filename_row_col true /
+set_attribute -quiet dp_postmap_upsize true /
+set_attribute -quiet dft_prefix SCAN_ /
+set_attribute -quiet ple_correlation_factors {1.9000 2.0000} /
+set_attribute -quiet maximum_interval_of_vias infinity /
+set_attribute -quiet interconnect_mode wireload /
+set_attribute -quiet wireload_mode enclosed /
+set_attribute -quiet wireload_selection /libraries/h18_CORELIB_HV_TYP/wireload_selections/sub_micron /
+set_attribute -quiet tree_type balanced_tree /libraries/h18_CORELIB_HV_TYP/operating_conditions/typical
+set_attribute -quiet tree_type balanced_tree /libraries/h18_CORELIB_HV_TYP/operating_conditions/_nominal_
+set_attribute -quiet tree_type balanced_tree /libraries/h18_IOLIB_HV_TYP/operating_conditions/typical
+set_attribute -quiet tree_type balanced_tree /libraries/h18_IOLIB_HV_TYP/operating_conditions/_nominal_
+# BEGIN MSV SECTION
+# END MSV SECTION
+define_clock -name clk -domain domain_1 -period 2000.0 -divide_period 1 -rise 0 -divide_rise 1 -fall 1 -divide_fall 2 -design /designs/pat /designs/pat/ports_in/clk
+# BEGIN DFT SECTION
+set_attribute -quiet dft_scan_style muxed_scan /
+set_attribute -quiet dft_scanbit_waveform_analysis false /
+set_attribute -quiet dft_dont_scan false {/designs/pat/instances_seq/field_out_reg[0]}
+set_attribute -quiet dft_dont_scan false {/designs/pat/instances_seq/field_out_reg[1]}
+set_attribute -quiet dft_dont_scan false {/designs/pat/instances_seq/field_out_reg[2]}
+set_attribute -quiet dft_dont_scan false {/designs/pat/instances_seq/field_out_reg[3]}
+set_attribute -quiet dft_dont_scan false {/designs/pat/instances_seq/field_out_reg[4]}
+set_attribute -quiet dft_dont_scan false {/designs/pat/instances_seq/field_out_reg[5]}
+set_attribute -quiet dft_dont_scan false {/designs/pat/instances_seq/field_out_reg[6]}
+set_attribute -quiet dft_dont_scan false {/designs/pat/instances_seq/field_out_reg[7]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[0]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[10]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[11]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[12]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[13]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[14]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[15]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[16]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[17]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[18]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[19]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[1]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[20]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[21]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[22]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[23]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[24]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[25]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[26]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[27]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[28]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[29]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[2]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[30]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[31]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[3]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[4]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[5]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[6]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[7]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[8]}
+set_attribute -quiet dft_dont_scan true {/designs/pat/instances_seq/data_out_reg[9]}
+define_dft test_clock -name scan_clock -domain scan_clock -period 2000.0 -divide_period 1 -rise 1 -divide_rise 2 -fall 9 -divide_fall 10 -controllable /designs/pat/ports_in/clk
+define_dft shift_enable -name {inputs[0][0]} -active high  {/designs/pat/ports_in/inputs[0][0]}   
+set_attribute -quiet default_shift_enable true {/designs/pat/dft/test_signals/inputs[0][0]}
+set_attribute -quiet ideal true {/designs/pat/dft/test_signals/inputs[0][0]}
+set_attribute -quiet dedicated_pin true {/designs/pat/dft/test_signals/inputs[0][0]}
+define_dft formal_verification_constraint -name wdl_cons_0 -pin inputs[0][0]  -golden low   -tool_derived -redefine 
+define_dft formal_verification_constraint -name wdl_cons_1 -pin inputs[0][0]    -revised low -tool_derived -redefine 
+# END DFT SECTION
+set_attribute -quiet hdl_user_name pat /designs/pat
+set_attribute -quiet hdl_parameters {{i_adr_width 10 0 10} {i_width 23 0 23} {d_adr_width 3 0 3} {d_width 32 0 32} {rd_width 3 0 3} {call_stack_size 8 0 8} {call_stack_pointer_size 3 0 3} {bufp_width 3 0 3} {fieldp_width 5 0 5} {buffer_width 8 0 8} {opcode_i8_width 4 0 4} {opcode_i3_width 4 0 4} {opcode_i0_width 4 0 4} {field_latency 4 0 4}} /designs/pat
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/pat
+set_attribute -quiet ovf_current_verification_directory fv/pat /designs/pat
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q /designs/pat/ports_in/clk
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q /designs/pat/ports_in/reset
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[22]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[21]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[20]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[19]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[18]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[17]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[16]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[15]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[14]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[13]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[12]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[11]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[10]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[9]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[8]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[7]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[6]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[5]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[4]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[3]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[2]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[1]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/instruction_in[0]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_low[7]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_low[6]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_low[5]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_low[4]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_low[3]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_low[2]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_low[1]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_low[0]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_high[7]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_high[6]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_high[5]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_high[4]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_high[3]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_high[2]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_high[1]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/field_in_high[0]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][31]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][30]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][29]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][28]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][27]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][26]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][25]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][24]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][23]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][22]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][21]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][20]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][19]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][18]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][17]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][16]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][15]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][14]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][13]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][12]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][11]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][10]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][9]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][8]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][7]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][6]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][5]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][4]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][3]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][2]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][1]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[2][0]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][31]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][30]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][29]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][28]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][27]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][26]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][25]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][24]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][23]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][22]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][21]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][20]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][19]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][18]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][17]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][16]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][15]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][14]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][13]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][12]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][11]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][10]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][9]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][8]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][7]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][6]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][5]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][4]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][3]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][2]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][1]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[1][0]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][31]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][30]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][29]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][28]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][27]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][26]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][25]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][24]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][23]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][22]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][21]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][20]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][19]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][18]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][17]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][16]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][15]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][14]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][13]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][12]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][11]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][10]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][9]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][8]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][7]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][6]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][5]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][4]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][3]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][2]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][1]}
+set_attribute -quiet external_driver /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q {/designs/pat/ports_in/inputs[0][0]}
+set_attribute -quiet ideal_network true {/designs/pat/ports_in/inputs[0][0]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/pc[9]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/pc[8]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/pc[7]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/pc[6]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/pc[5]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/pc[4]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/pc[3]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/pc[2]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/pc[1]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/pc[0]}
+set_attribute -quiet external_pin_cap {10.0 10.0} /designs/pat/ports_out/jump
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/bufp[2]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/bufp[1]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/bufp[0]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/fieldp[4]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/fieldp[3]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/fieldp[2]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/fieldp[1]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/fieldp[0]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/fieldwp[4]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/fieldwp[3]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/fieldwp[2]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/fieldwp[1]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/fieldwp[0]}
+set_attribute -quiet external_pin_cap {10.0 10.0} /designs/pat/ports_out/field_write_en_low
+set_attribute -quiet external_pin_cap {10.0 10.0} /designs/pat/ports_out/field_write_en_high
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/field_out[7]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/field_out[6]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/field_out[5]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/field_out[4]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/field_out[3]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/field_out[2]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/field_out[1]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/field_out[0]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][31]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][30]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][29]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][28]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][27]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][26]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][25]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][24]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][23]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][22]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][21]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][20]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][19]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][18]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][17]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][16]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][15]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][14]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][13]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][12]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][11]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][10]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][9]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][8]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][7]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][6]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][5]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][4]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][3]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][2]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][1]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[2][0]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][31]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][30]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][29]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][28]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][27]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][26]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][25]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][24]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][23]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][22]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][21]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][20]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][19]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][18]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][17]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][16]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][15]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][14]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][13]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][12]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][11]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][10]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][9]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][8]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][7]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][6]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][5]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][4]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][3]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][2]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][1]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[1][0]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][31]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][30]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][29]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][28]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][27]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][26]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][25]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][24]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][23]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][22]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][21]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][20]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][19]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][18]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][17]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][16]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][15]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][14]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][13]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][12]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][11]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][10]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][9]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][8]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][7]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][6]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][5]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][4]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][3]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][2]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][1]}
+set_attribute -quiet external_pin_cap {10.0 10.0} {/designs/pat/ports_out/outputs[0][0]}
+set_attribute -quiet hdl_user_name alu /designs/pat/subdesigns/alu
+set_attribute -quiet hdl_parameters {{d_width 32 0 32}} /designs/pat/subdesigns/alu
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/pat/subdesigns/alu
+set_attribute -quiet logical_hier false /designs/pat/subdesigns/add_unsigned_239
+set_attribute -quiet rtlop_info {{} 0 0 0 3 0 7 0 2 1 1 0} /designs/pat/instances_hier/accALU/instances_hier/theAdder_add_705_14
+set_attribute -quiet hdl_user_name shifter /designs/pat/subdesigns/shifter
+set_attribute -quiet hdl_parameters {{d_width 32 0 32}} /designs/pat/subdesigns/shifter
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/pat/subdesigns/shifter
+set_attribute -quiet logical_hier false /designs/pat/subdesigns/shift_left_vlog_unsigned_404
+set_attribute -quiet rtlop_info {{} 0 0 0 3 0 21 0 2 1 1 0} /designs/pat/instances_hier/accALU/instances_hier/theShifter/instances_hier/sll_658_16
+set_attribute -quiet logical_hier false /designs/pat/subdesigns/shift_right_vlog_unsigned_502
+set_attribute -quiet logical_hier false /designs/pat/subdesigns/sub_unsigned_241
+set_attribute -quiet rtlop_info {{} 0 0 0 3 0 9 0 2 1 1 0} /designs/pat/instances_hier/accALU/instances_hier/theSub_sub_695_14
+set_attribute -quiet optimize_merge_seq false {/designs/pat/instances_seq/field_out_reg[0]}
+set_attribute -quiet optimize_merge_seq false {/designs/pat/instances_seq/field_out_reg[1]}
+set_attribute -quiet optimize_merge_seq false {/designs/pat/instances_seq/field_out_reg[2]}
+set_attribute -quiet optimize_merge_seq false {/designs/pat/instances_seq/field_out_reg[3]}
+set_attribute -quiet optimize_merge_seq false {/designs/pat/instances_seq/field_out_reg[4]}
+set_attribute -quiet optimize_merge_seq false {/designs/pat/instances_seq/field_out_reg[5]}
+set_attribute -quiet optimize_merge_seq false {/designs/pat/instances_seq/field_out_reg[6]}
+set_attribute -quiet optimize_merge_seq false {/designs/pat/instances_seq/field_out_reg[7]}
+set_attribute -quiet hdl_user_name alu /designs/pat/subdesigns/alu_1
+set_attribute -quiet hdl_parameters {{d_width 32 0 32}} /designs/pat/subdesigns/alu_1
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/pat/subdesigns/alu_1
+set_attribute -quiet logical_hier false /designs/pat/subdesigns/add_unsigned_239_1
+set_attribute -quiet rtlop_info {{} 0 0 0 3 0 7 0 2 1 1 0} /designs/pat/instances_hier/immALU/instances_hier/theAdder_add_705_14
+set_attribute -quiet hdl_user_name shifter /designs/pat/subdesigns/shifter_1
+set_attribute -quiet hdl_parameters {{d_width 32 0 32}} /designs/pat/subdesigns/shifter_1
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/pat/subdesigns/shifter_1
+set_attribute -quiet logical_hier false /designs/pat/subdesigns/shift_left_vlog_unsigned
+set_attribute -quiet rtlop_info {{} 0 0 0 3 0 21 0 2 1 1 0} /designs/pat/instances_hier/immALU/instances_hier/theShifter/instances_hier/sll_658_16
+set_attribute -quiet logical_hier false /designs/pat/subdesigns/shift_right_vlog_unsigned
+set_attribute -quiet logical_hier false /designs/pat/subdesigns/sub_unsigned_241_1
+set_attribute -quiet rtlop_info {{} 0 0 0 3 0 9 0 2 1 1 0} /designs/pat/instances_hier/immALU/instances_hier/theSub_sub_695_14
+set_attribute -quiet hdl_user_name program_counter /designs/pat/subdesigns/program_counter
+set_attribute -quiet hdl_parameters {{i_adr_width 10 0 10}} /designs/pat/subdesigns/program_counter
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/pat/subdesigns/program_counter
+set_attribute -quiet ungroup_ok false /designs/pat/instances_hier/thePC
+check_dft_rules

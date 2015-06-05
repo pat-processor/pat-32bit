@@ -1,0 +1,135 @@
+######################################################################
+
+# Created by Encounter(R) RTL Compiler v11.10-p005_1 on Sun Mar 01 12:27:09 +0000 2015
+
+# This file contains the RC script for /designs/pads
+
+######################################################################
+
+set_attribute -quiet information_level 2 /
+set_attribute -quiet gui_auto_update false /
+set_attribute -quiet lib_search_path /home/research/software/asic/kits/ams/H18/liberty/h18_1.8V /
+set_attribute -quiet hdl_track_filename_row_col true /
+set_attribute -quiet dp_postmap_upsize true /
+set_attribute -quiet dft_prefix SCAN_ /
+set_attribute -quiet interconnect_mode wireload /
+set_attribute -quiet wireload_mode enclosed /
+set_attribute -quiet wireload_selection /libraries/h18_CORELIB_TYP/wireload_selections/sub_micron /
+set_attribute -quiet tree_type balanced_tree /libraries/h18_CORELIB_TYP/operating_conditions/typical
+set_attribute -quiet tree_type balanced_tree /libraries/h18_CORELIB_TYP/operating_conditions/_nominal_
+set_attribute -quiet tree_type balanced_tree /libraries/h18_IOLIB_TYP/operating_conditions/typical
+set_attribute -quiet tree_type balanced_tree /libraries/h18_IOLIB_TYP/operating_conditions/_nominal_
+# BEGIN MSV SECTION
+# END MSV SECTION
+define_clock -name clock_pat -domain domain_1 -period 2000.0 -divide_period 1 -rise 0 -divide_rise 1 -fall 1 -divide_fall 2 -design /designs/pads /designs/pads/ports_in/pad_clock_in
+multi_cycle -paths [specify_paths -lenient -from {{/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[0]} {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[1]} {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[2]} {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[3]} {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[4]} {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[5]} {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[6]} {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[7]}} -to {{/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][0]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][10]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][11]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][12]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][13]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][14]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][1]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][20]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][21]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][22]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][2]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][3]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][4]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][5]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][6]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][7]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][8]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[0][9]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][0]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][10]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][11]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][12]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][13]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][14]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][1]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][20]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][21]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][22]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][2]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][3]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][4]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][5]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][6]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][7]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][8]} {/designs/pads/instances_hier/theCore/instances_seq/iBuffer_i_buffer_reg[1][9]}}]  -launch_shift 0 -capture_shift 2 -name mc_1 -setup -user_priority -991232
+path_disable -paths [specify_paths -lenient -from {/designs/pads/ports_in/pad_imem_write /designs/pads/ports_in/pad_reset}]  -name zipped_path_disable_0 -user_priority -901120
+# BEGIN DFT SECTION
+set_attribute -quiet dft_scan_style muxed_scan /
+set_attribute -quiet dft_scanbit_waveform_analysis false /
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[0]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[10]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[11]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[12]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[13]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[14]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[15]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[16]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[17]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[18]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[19]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[1]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[20]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[21]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[22]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[23]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[24]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[25]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[26]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[27]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[28]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[29]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[2]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[30]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[31]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[3]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[4]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[5]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[6]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[7]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[8]}
+set_attribute -quiet dft_dont_scan false {/designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_seq/data_out_reg[9]}
+define_dft test_clock -name scan_clock -domain scan_clock -period 2000.0 -divide_period 1 -rise 1 -divide_rise 2 -fall 9 -divide_fall 10 -controllable -hookup_pin /designs/pads/instances_comb/iopad_clock_in/pins_out/Y -hookup_polarity non_inverted /designs/pads/ports_in/pad_clock_in
+define_dft shift_enable -name pad_scan_enable -active high  -hookup_pin /designs/pads/instances_comb/iopad_scan_enable/pins_out/Y -hookup_polarity non_inverted /designs/pads/ports_in/pad_scan_enable   
+set_attribute -quiet default_shift_enable true /designs/pads/dft/test_signals/pad_scan_enable
+set_attribute -quiet ideal true /designs/pads/dft/test_signals/pad_scan_enable
+set_attribute -quiet dedicated_pin true /designs/pads/dft/test_signals/pad_scan_enable
+define_dft formal_verification_constraint -name wdl_cons_0 -pin pad_scan_enable  -golden low   -tool_derived -redefine 
+define_dft formal_verification_constraint -name wdl_cons_1 -pin pad_scan_enable    -revised low -tool_derived -redefine 
+define_dft scan_chain -name scan_chain_1  -domain /designs/pads/dft/test_clock_domains/scan_clock  -sdi /designs/pads/instances_comb/iopad_inputs/pins_out/Y -sdo /designs/pads/instances_comb/iopad_output/pins_in/A      -shared_out 
+#define_dft scan_chain -name scan_chain_1 -sdi /designs/pads/instances_comb/iopad_inputs/pins_out/Y  -sdo /designs/pads/instances_comb/iopad_output/pins_in/A  -analyze -shared_out   
+#set_attribute -quiet compressed true /designs/pads/dft/report/actual_scan_chains/scan_chain_1
+# END DFT SECTION
+set_attribute -quiet hdl_user_name pads /designs/pads
+set_attribute -quiet hdl_parameters {{d_width 32 0 32} {bufp_width 3 0 3} {fieldp_width 5 0 5} {io_division 3 0 3}} /designs/pads
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}} {default -sv {SYNTHESIS} {digital.sv}} {default -v2001 {SYNTHESIS} {pads.v}}} /designs/pads
+set_attribute -quiet ovf_current_verification_directory fv/pads /designs/pads
+set_attribute -quiet external_driver /libraries/h18_CORELIB_TYP/libcells/CLKBUFX32/Q /designs/pads/ports_in/pad_vdd_1v8_all
+set_attribute -quiet external_driver /libraries/h18_CORELIB_TYP/libcells/CLKBUFX32/Q /designs/pads/ports_in/pad_gnd_all
+set_attribute -quiet external_driver /libraries/h18_CORELIB_TYP/libcells/CLKBUFX32/Q /designs/pads/ports_in/pad_clock_in
+set_attribute -quiet external_driver /libraries/h18_CORELIB_TYP/libcells/CLKBUFX32/Q /designs/pads/ports_in/pad_scan_enable
+set_attribute -quiet ideal_network true /designs/pads/ports_in/pad_scan_enable
+set_attribute -quiet external_driver /libraries/h18_CORELIB_TYP/libcells/CLKBUFX32/Q /designs/pads/ports_in/pad_imem_write
+set_attribute -quiet external_driver /libraries/h18_CORELIB_TYP/libcells/CLKBUFX32/Q /designs/pads/ports_in/pad_reset
+set_attribute -quiet external_driver /libraries/h18_CORELIB_TYP/libcells/CLKBUFX32/Q /designs/pads/ports_in/pad_inputs
+set_attribute -quiet ideal_network true /designs/pads/instances_comb/iopad_scan_enable/pins_out/Y
+set_attribute -quiet hdl_user_name digital /designs/pads/subdesigns/digital
+set_attribute -quiet hdl_parameters {{d_width 32 0 32} {i_adr_width 8 0 8} {i_width 23 0 23} {i_buffer_size 2 0 2} {bufp_width 3 0 3} {fieldp_width 5 0 5}} /designs/pads/subdesigns/digital
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}} {default -sv {SYNTHESIS} {digital.sv}}} /designs/pads/subdesigns/digital
+set_attribute -quiet dft_auto_created 1 /designs/pads/instances_hier/theCore/subports_in/SCAN_sdi
+set_attribute -quiet dft_auto_created 1 /designs/pads/instances_hier/theCore/subports_in/SCAN_sen
+set_attribute -quiet dft_auto_created 1 /designs/pads/instances_hier/theCore/subports_out/SCAN_sdo
+set_attribute -quiet hdl_user_name inst_mem /designs/pads/subdesigns/inst_mem_i_adr_width8
+set_attribute -quiet hdl_parameters {{i_buffer_size 2 0 2} {i_mem_size 256 0 256} {i_mem_lines 128 0 128} {i_adr_width 8 0 9} {i_width 23 0 23}} /designs/pads/subdesigns/inst_mem_i_adr_width8
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/pads/subdesigns/inst_mem_i_adr_width8
+set_attribute -quiet hdl_user_name pat /designs/pads/subdesigns/pat_i_adr_width8
+set_attribute -quiet hdl_parameters {{i_adr_width 8 0 10} {i_width 23 0 23} {d_adr_width 3 0 3} {d_width 32 0 32} {rd_width 3 0 3} {call_stack_size 8 0 8} {call_stack_pointer_size 3 0 3} {bufp_width 3 0 3} {fieldp_width 5 0 5} {buffer_width 8 0 8} {opcode_i8_width 4 0 4} {opcode_i3_width 4 0 4} {opcode_i0_width 4 0 4} {field_latency 4 0 4}} /designs/pads/subdesigns/pat_i_adr_width8
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/pads/subdesigns/pat_i_adr_width8
+set_attribute -quiet dft_auto_created 1 /designs/pads/instances_hier/theCore/instances_hier/thePAT/subports_in/SCAN_sdi
+set_attribute -quiet dft_auto_created 1 /designs/pads/instances_hier/theCore/instances_hier/thePAT/subports_in/SCAN_sen
+set_attribute -quiet dft_auto_created 1 /designs/pads/instances_hier/theCore/instances_hier/thePAT/subports_out/SCAN_sdo
+set_attribute -quiet hdl_user_name alu /designs/pads/subdesigns/alu
+set_attribute -quiet hdl_parameters {{d_width 32 0 32}} /designs/pads/subdesigns/alu
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/pads/subdesigns/alu
+set_attribute -quiet logical_hier false /designs/pads/subdesigns/add_unsigned_296
+set_attribute -quiet rtlop_info {{} 0 0 0 3 0 7 0 2 1 1 0} /designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/accALU/instances_hier/theAdder_add_722_14
+set_attribute -quiet hdl_user_name shifter /designs/pads/subdesigns/shifter
+set_attribute -quiet hdl_parameters {{d_width 32 0 32}} /designs/pads/subdesigns/shifter
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/pads/subdesigns/shifter
+set_attribute -quiet logical_hier false /designs/pads/subdesigns/shift_left_vlog_unsigned_669
+set_attribute -quiet rtlop_info {{} 0 0 0 3 0 21 0 2 1 1 0} /designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/accALU/instances_hier/theShifter/instances_hier/sll_675_16
+set_attribute -quiet logical_hier false /designs/pads/subdesigns/shift_right_vlog_unsigned_767
+set_attribute -quiet logical_hier false /designs/pads/subdesigns/sub_unsigned_298
+set_attribute -quiet rtlop_info {{} 0 0 0 3 0 9 0 2 1 1 0} /designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/accALU/instances_hier/theSub_sub_712_14
+set_attribute -quiet hdl_user_name alu /designs/pads/subdesigns/alu_1
+set_attribute -quiet hdl_parameters {{d_width 32 0 32}} /designs/pads/subdesigns/alu_1
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/pads/subdesigns/alu_1
+set_attribute -quiet logical_hier false /designs/pads/subdesigns/add_unsigned_296_1
+set_attribute -quiet rtlop_info {{} 0 0 0 3 0 7 0 2 1 1 0} /designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/immALU/instances_hier/theAdder_add_722_14
+set_attribute -quiet hdl_user_name shifter /designs/pads/subdesigns/shifter_1
+set_attribute -quiet hdl_parameters {{d_width 32 0 32}} /designs/pads/subdesigns/shifter_1
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/pads/subdesigns/shifter_1
+set_attribute -quiet logical_hier false /designs/pads/subdesigns/shift_left_vlog_unsigned
+set_attribute -quiet rtlop_info {{} 0 0 0 3 0 21 0 2 1 1 0} /designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/immALU/instances_hier/theShifter/instances_hier/sll_675_16
+set_attribute -quiet logical_hier false /designs/pads/subdesigns/shift_right_vlog_unsigned
+set_attribute -quiet logical_hier false /designs/pads/subdesigns/sub_unsigned_298_1
+set_attribute -quiet rtlop_info {{} 0 0 0 3 0 9 0 2 1 1 0} /designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/immALU/instances_hier/theSub_sub_712_14
+set_attribute -quiet hdl_user_name program_counter /designs/pads/subdesigns/program_counter_i_adr_width8
+set_attribute -quiet hdl_parameters {{i_adr_width 8 0 10} {call_stack_size 8 0 8} {call_stack_pointer_size 3 0 3}} /designs/pads/subdesigns/program_counter_i_adr_width8
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/pads/subdesigns/program_counter_i_adr_width8
+set_attribute -quiet dft_auto_created 1 /designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/thePC/subports_in/SCAN_sdi
+set_attribute -quiet dft_auto_created 1 /designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/thePC/subports_in/SCAN_sen
+set_attribute -quiet dft_auto_created 1 /designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/thePC/subports_out/SCAN_sdo
+set_attribute -quiet ungroup_ok false /designs/pads/instances_hier/theCore/instances_hier/thePAT/instances_hier/thePC
+set_attribute -quiet ungroup_ok false /designs/pads/instances_hier/theCore/instances_hier/thePAT
+check_dft_rules

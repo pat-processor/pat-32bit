@@ -1,0 +1,157 @@
+######################################################################
+
+# Created by Encounter(R) RTL Compiler v11.20-s017_1 on Tue May 27 19:09:15 +0100 2014
+
+# This file contains the RC script for /designs/digital
+
+######################################################################
+
+set_attribute -quiet information_level 2 /
+set_attribute -quiet gui_auto_update false /
+set_attribute -quiet lib_search_path /home/research/software/asic/kits/ams/H18/liberty/h18_1.8V /
+set_attribute -quiet hdl_track_filename_row_col true /
+set_attribute -quiet dp_postmap_upsize true /
+set_attribute -quiet optimize_merge_flops false /
+set_attribute -quiet dft_prefix SCAN_ /
+set_attribute -quiet ple_correlation_factors {1.9000 2.0000} /
+set_attribute -quiet maximum_interval_of_vias infinity /
+set_attribute -quiet interconnect_mode wireload /
+set_attribute -quiet wireload_mode enclosed /
+set_attribute -quiet wireload_selection /libraries/h18_CORELIB_HV_TYP/wireload_selections/sub_micron /
+set_attribute -quiet tree_type balanced_tree /libraries/h18_CORELIB_HV_TYP/operating_conditions/typical
+set_attribute -quiet tree_type balanced_tree /libraries/h18_CORELIB_HV_TYP/operating_conditions/_nominal_
+set_attribute -quiet tree_type balanced_tree /libraries/h18_IOLIB_HV_TYP/operating_conditions/typical
+set_attribute -quiet tree_type balanced_tree /libraries/h18_IOLIB_HV_TYP/operating_conditions/_nominal_
+# BEGIN MSV SECTION
+# END MSV SECTION
+define_clock -name clk -domain domain_1 -period 1000.0 -divide_period 1 -rise 0 -divide_rise 1 -fall 1 -divide_fall 2 -design /designs/digital {}
+multi_cycle -paths [specify_paths -lenient -from {/designs/digital/ports_in/scan_enable /designs/digital/ports_in/scan_in /designs/digital/ports_in/clk /designs/digital/ports_in/reset {/designs/digital/ports_in/inputs[7]} {/designs/digital/ports_in/inputs[6]} {/designs/digital/ports_in/inputs[5]} {/designs/digital/ports_in/inputs[4]} {/designs/digital/ports_in/inputs[3]} {/designs/digital/ports_in/inputs[2]} {/designs/digital/ports_in/inputs[1]} {/designs/digital/ports_in/inputs[0]} {/designs/digital/ports_in/imem_write_adr[9]} {/designs/digital/ports_in/imem_write_adr[8]} {/designs/digital/ports_in/imem_write_adr[7]} {/designs/digital/ports_in/imem_write_adr[6]} {/designs/digital/ports_in/imem_write_adr[5]} {/designs/digital/ports_in/imem_write_adr[4]} {/designs/digital/ports_in/imem_write_adr[3]} {/designs/digital/ports_in/imem_write_adr[2]} {/designs/digital/ports_in/imem_write_adr[1]} {/designs/digital/ports_in/imem_write_adr[0]} /designs/digital/ports_in/imem_write {/designs/digital/ports_in/imem_in[39]} {/designs/digital/ports_in/imem_in[38]} {/designs/digital/ports_in/imem_in[37]} {/designs/digital/ports_in/imem_in[36]} {/designs/digital/ports_in/imem_in[35]} {/designs/digital/ports_in/imem_in[34]} {/designs/digital/ports_in/imem_in[33]} {/designs/digital/ports_in/imem_in[32]} {/designs/digital/ports_in/imem_in[31]} {/designs/digital/ports_in/imem_in[30]} {/designs/digital/ports_in/imem_in[29]} {/designs/digital/ports_in/imem_in[28]} {/designs/digital/ports_in/imem_in[27]} {/designs/digital/ports_in/imem_in[26]} {/designs/digital/ports_in/imem_in[25]} {/designs/digital/ports_in/imem_in[24]} {/designs/digital/ports_in/imem_in[23]} {/designs/digital/ports_in/imem_in[22]} {/designs/digital/ports_in/imem_in[21]} {/designs/digital/ports_in/imem_in[20]} {/designs/digital/ports_in/imem_in[19]} {/designs/digital/ports_in/imem_in[18]} {/designs/digital/ports_in/imem_in[17]} {/designs/digital/ports_in/imem_in[16]} {/designs/digital/ports_in/imem_in[15]} {/designs/digital/ports_in/imem_in[14]} {/designs/digital/ports_in/imem_in[13]} {/designs/digital/ports_in/imem_in[12]} {/designs/digital/ports_in/imem_in[11]} {/designs/digital/ports_in/imem_in[10]} {/designs/digital/ports_in/imem_in[9]} {/designs/digital/ports_in/imem_in[8]} {/designs/digital/ports_in/imem_in[7]} {/designs/digital/ports_in/imem_in[6]} {/designs/digital/ports_in/imem_in[5]} {/designs/digital/ports_in/imem_in[4]} {/designs/digital/ports_in/imem_in[3]} {/designs/digital/ports_in/imem_in[2]} {/designs/digital/ports_in/imem_in[1]} {/designs/digital/ports_in/imem_in[0]} {/designs/digital/ports_in/field_toPAT_low[7]} {/designs/digital/ports_in/field_toPAT_low[6]} {/designs/digital/ports_in/field_toPAT_low[5]} {/designs/digital/ports_in/field_toPAT_low[4]} {/designs/digital/ports_in/field_toPAT_low[3]} {/designs/digital/ports_in/field_toPAT_low[2]} {/designs/digital/ports_in/field_toPAT_low[1]} {/designs/digital/ports_in/field_toPAT_low[0]} {/designs/digital/ports_in/field_toPAT_high[7]} {/designs/digital/ports_in/field_toPAT_high[6]} {/designs/digital/ports_in/field_toPAT_high[5]} {/designs/digital/ports_in/field_toPAT_high[4]} {/designs/digital/ports_in/field_toPAT_high[3]} {/designs/digital/ports_in/field_toPAT_high[2]} {/designs/digital/ports_in/field_toPAT_high[1]} {/designs/digital/ports_in/field_toPAT_high[0]}}]  -launch_shift 0 -capture_shift 4 -name mc_1 -setup -user_priority -999424
+multi_cycle -paths [specify_paths -lenient -from {{/designs/digital/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[2]} {/designs/digital/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[3]} {/designs/digital/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[4]} {/designs/digital/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[5]} {/designs/digital/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[6]} {/designs/digital/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[7]} {/designs/digital/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[8]} {/designs/digital/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[0]} {/designs/digital/instances_hier/thePAT/instances_hier/thePC/instances_seq/pc_out_reg[1]}} -to {{/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][0]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][10]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][11]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][12]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][13]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][14]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][15]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][16]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][17]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][18]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][19]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][1]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][2]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][3]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][4]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][5]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][6]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][7]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][8]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[0][9]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][0]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][10]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][11]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][12]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][13]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][14]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][15]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][16]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][17]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][18]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][19]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][1]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][2]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][3]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][4]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][5]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][6]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][7]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][8]} {/designs/digital/instances_seq/iBuffer_i_buffer_reg[1][9]}}]  -launch_shift 0 -capture_shift 2 -name mc_2 -setup -user_priority -991232
+# BEGIN DFT SECTION
+set_attribute -quiet dft_scan_style muxed_scan /
+set_attribute -quiet dft_scanbit_waveform_analysis false /
+define_dft test_clock -name scan_clock -domain scan_clock -period 1000.0 -divide_period 1 -rise 1 -divide_rise 2 -fall 9 -divide_fall 10 -controllable /designs/digital/ports_in/clk
+define_dft shift_enable -name scan_enable -active high  /designs/digital/ports_in/scan_enable   
+set_attribute -quiet default_shift_enable true /designs/digital/dft/test_signals/scan_enable
+set_attribute -quiet ideal true /designs/digital/dft/test_signals/scan_enable
+set_attribute -quiet dedicated_pin true /designs/digital/dft/test_signals/scan_enable
+define_dft formal_verification_constraint -name wdl_cons_0 -pin scan_enable  -golden low   -tool_derived -redefine 
+define_dft formal_verification_constraint -name wdl_cons_1 -pin scan_enable    -revised low -tool_derived -redefine 
+define_dft scan_chain -name scan_chain_1  -domain /designs/digital/dft/test_clock_domains/scan_clock  -sdi /designs/digital/ports_in/scan_in -sdo /designs/digital/ports_out/scan_out      -non_shared_out 
+#define_dft scan_chain -name scan_chain_1 -sdi /designs/digital/ports_in/scan_in  -sdo /designs/digital/ports_out/scan_out  -analyze -non_shared_out   
+#set_attribute -quiet compressed true /designs/digital/dft/report/actual_scan_chains/scan_chain_1
+# END DFT SECTION
+set_attribute -quiet hdl_user_name digital /designs/digital
+set_attribute -quiet hdl_parameters {{d_width 8 0 8} {i_adr_width 10 0 10} {i_width 20 0 20} {i_buffer_size 2 0 2} {bufp_width 3 0 3} {fieldp_width 5 0 5}} /designs/digital
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}} {default -sv {SYNTHESIS} {digital.sv}}} /designs/digital
+set_attribute -quiet ovf_current_verification_directory fv/digital /designs/digital
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} /designs/digital/ports_in/scan_enable
+set_attribute -quiet ideal_network true /designs/digital/ports_in/scan_enable
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} /designs/digital/ports_in/scan_in
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} /designs/digital/ports_in/clk
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} /designs/digital/ports_in/reset
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/inputs[7]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/inputs[6]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/inputs[5]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/inputs[4]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/inputs[3]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/inputs[2]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/inputs[1]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/inputs[0]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_write_adr[9]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_write_adr[8]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_write_adr[7]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_write_adr[6]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_write_adr[5]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_write_adr[4]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_write_adr[3]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_write_adr[2]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_write_adr[1]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_write_adr[0]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} /designs/digital/ports_in/imem_write
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[39]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[38]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[37]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[36]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[35]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[34]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[33]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[32]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[31]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[30]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[29]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[28]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[27]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[26]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[25]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[24]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[23]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[22]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[21]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[20]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[19]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[18]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[17]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[16]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[15]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[14]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[13]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[12]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[11]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[10]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[9]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[8]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[7]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[6]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[5]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[4]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[3]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[2]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[1]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/imem_in[0]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_low[7]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_low[6]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_low[5]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_low[4]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_low[3]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_low[2]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_low[1]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_low[0]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_high[7]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_high[6]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_high[5]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_high[4]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_high[3]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_high[2]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_high[1]}
+set_attribute -quiet external_driver_input_slew {100.0 100.0 100.0 100.0} {/designs/digital/ports_in/field_toPAT_high[0]}
+set_attribute -quiet hdl_user_name inst_mem /designs/digital/subdesigns/inst_mem
+set_attribute -quiet hdl_parameters {{i_buffer_size 2 0 2} {i_mem_size 512 0 512} {i_mem_lines 256 0 256} {i_adr_width 10 0 10} {i_width 20 0 20}} /designs/digital/subdesigns/inst_mem
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/digital/subdesigns/inst_mem
+set_attribute -quiet is_sop_cluster true /designs/digital/subdesigns/pat
+set_attribute -quiet hdl_user_name pat /designs/digital/subdesigns/pat
+set_attribute -quiet hdl_parameters {{i_adr_width 10 0 10} {i_width 20 0 20} {d_adr_width 8 0 8} {d_width 8 0 8} {call_stack_size 8 0 8} {call_stack_pointer_size 3 0 3} {bufp_width 3 0 3} {fieldp_width 5 0 5} {buffer_width 8 0 8} {opcode_i8_width 4 0 4} {opcode_i3_width 4 0 4} {opcode_i0_width 4 0 4} {field_latency 4 0 4}} /designs/digital/subdesigns/pat
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/digital/subdesigns/pat
+set_attribute -quiet dft_auto_created 1 /designs/digital/instances_hier/thePAT/subports_in/SCAN_sdi
+set_attribute -quiet dft_auto_created 1 /designs/digital/instances_hier/thePAT/subports_in/SCAN_sen
+set_attribute -quiet dft_auto_created 1 /designs/digital/instances_hier/thePAT/subports_out/SCAN_sdo
+set_attribute -quiet hdl_user_name alu /designs/digital/subdesigns/alu
+set_attribute -quiet hdl_parameters {{d_width 8 0 8}} /designs/digital/subdesigns/alu
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/digital/subdesigns/alu
+set_attribute -quiet hdl_user_name shifter /designs/digital/subdesigns/shifter
+set_attribute -quiet hdl_parameters {{d_width 8 0 8}} /designs/digital/subdesigns/shifter
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/digital/subdesigns/shifter
+set_attribute -quiet hdl_user_name alu /designs/digital/subdesigns/alu_416
+set_attribute -quiet hdl_parameters {{d_width 8 0 8}} /designs/digital/subdesigns/alu_416
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/digital/subdesigns/alu_416
+set_attribute -quiet hdl_user_name shifter /designs/digital/subdesigns/shifter_423
+set_attribute -quiet hdl_parameters {{d_width 8 0 8}} /designs/digital/subdesigns/shifter_423
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/digital/subdesigns/shifter_423
+set_attribute -quiet hdl_user_name program_counter /designs/digital/subdesigns/program_counter
+set_attribute -quiet hdl_parameters {{i_adr_width 10 0 10}} /designs/digital/subdesigns/program_counter
+set_attribute -quiet hdl_filelist {{default -sv {SYNTHESIS} {pat.sv}}} /designs/digital/subdesigns/program_counter
+set_attribute -quiet dft_auto_created 1 /designs/digital/instances_hier/thePAT/instances_hier/thePC/subports_in/SCAN_sdi
+set_attribute -quiet dft_auto_created 1 /designs/digital/instances_hier/thePAT/instances_hier/thePC/subports_in/SCAN_sen
+set_attribute -quiet dft_auto_created 1 /designs/digital/instances_hier/thePAT/instances_hier/thePC/subports_out/SCAN_sdo
+set_attribute -quiet ungroup_ok false /designs/digital/instances_hier/thePAT/instances_hier/thePC
+check_dft_rules

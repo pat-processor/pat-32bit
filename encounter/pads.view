@@ -1,0 +1,9 @@
+# Version:1.0 MMMC View Definition File
+# Do Not Remove Above Line
+create_rc_corner -name TYP -cap_table {H18/cds/HK_H18/LEF/h18a6/h18a6.capTable} -preRoute_res {1.0} -preRoute_cap {1.0} -preRoute_clkres {0.0} -preRoute_clkcap {0.0} -postRoute_res {1.0} -postRoute_cap {1.0} -postRoute_xcap {1.0} -postRoute_clkres {0.0} -postRoute_clkcap {0.0}
+create_op_cond -name TYP -library_file {H18/cds/HK_H18/cds.lib} -P {10.0} -V {10.0} -T {10.0}
+create_library_set -name TYP -timing {H18/liberty/h18_1.8V/h18_CORELIB_TYP.lib H18/liberty/h18_1.8V/h18_IOLIB_TYP.lib H18/liberty/h18_1.8V/h18_PHYSICAL.lib}
+create_constraint_mode -name TYP -sdc_files {pads-mapped.sdc}
+create_delay_corner -name TYP -library_set {TYP} -rc_corner {TYP}
+create_analysis_view -name TYP -constraint_mode {TYP} -delay_corner {TYP}
+set_analysis_view -setup {TYP} -hold {TYP}

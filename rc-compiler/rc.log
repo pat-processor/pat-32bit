@@ -1,0 +1,383 @@
+Checking out license 'RTL_Compiler_Ultra'... (0 seconds elapsed)
+Reading GUI preferences file '/home/staff/simon/linux/.cadence/rc.gui'.
+
+                                                               Cadence Encounter(R) RTL Compiler
+                                                       Version v11.20-s017_1 (32-bit), built Jul 19 2012
+
+
+Copyright notice: Copyright 1997-2012 Cadence Design Systems, Inc. All rights reserved worldwide. 
+
+Patent notices: Protected by U.S. Patents: 5892687; 6470486; 6772398; 6772399; 6807651; 6832357; 7007247; 8127260 
+
+WARNING: This version of RC is 924 days old.
+         Visit downloads.cadence.com for the latest release of RC.
+
+
+================================================================================================================================================================
+                                                          Welcome to Cadence Encounter(R) RTL Compiler
+
+Here is a quick introduction on how to access our product information.  
+If you do not want this message to appear in the future, create an 
+initialization file (an empty file will do) in your home directory 
+called '~/.cadence/.synth_init'.
+
+  To access the product documentation in HTML and PDF, type 'cdnshelp'
+    at the system prompt. 
+  For a list of available commands, type 'help'. 
+  To view a man page for a command, type 'man <commandName>'.
+  To view a man page for an error message, type 'man <messageID>'.
+  For a list of all possible object types, type 'get_attribute -help'.
+  For a list of all available attributes by object type, type
+    'get_attribute * <object_type> -help'.
+  For a list of all attributes for every object type, type
+    'get_attribute * * -help'
+  To list only writable attributes, substitute 'get_attribute' with
+    'set_attribute'.
+  To get a template script to run RTL Compiler, use the 'write_template'
+    command.
+  To get a template script to run Conformal based on the current RTL
+    Compiler session, use the 'write_do_lec' command.
+  
+  Obsolete attributes in the current tool version.
+  To learn more, type 'get_attribute -help <attribute> <object>'.
+
+               object  attribute
+               ------  ---------
+               design  dp_perform_rewriting_operations
+               design  lp_map_to_srpg_cells
+               design  lp_optimize_dynamic_power_first
+               design  lp_srpg_pg_driver
+             instance  black_box
+             instance  dft_inherited_dont_scan
+             instance  inherited_default_power_domain
+             instance  lp_map_to_srpg_cells
+             instance  lp_map_to_srpg_type
+             instance  lp_srpg_pg_driver
+              libcell  black_box
+              libcell  location
+                  net  logic0_driven
+                  net  logic1_driven
+    nominal_condition  operating_condition
+                  pin  inherited_default_power_domain
+                 port  inherited_default_power_domain
+                 root  auto_ungroup_min_effort
+                 root  degenerate_complex_seqs
+                 root  dp_area_mode
+                 root  dp_perform_csa_operations
+                 root  dp_perform_rewriting_operations
+                 root  dp_perform_sharing_operations
+                 root  dp_perform_speculation_operations
+                 root  exact_match_seqs_async_controls
+                 root  hdl_flatten_array
+                 root  hdl_old_reg_naming
+                 root  hdl_reg_naming_style_scalar
+                 root  hdl_reg_naming_style_vector
+                 root  hdl_trim_target_index
+                 root  ignore_unknown_embedded_commands
+                 root  lbr_async_clr_pre_seqs_interchangable
+                 root  ple_parameter_source_priority
+                 root  pqos_virtual_buffer
+                 root  retime_preserve_state_points
+                 root  wlec_env_var
+                 root  wlec_flat_r2n
+                 root  wlec_no_exit
+                 root  wlec_old_lp_ec_flow
+                 root  wlec_save_ssion
+                 root  wlec_sim_lib
+                 root  wlec_sim_plus_lib
+                 root  wlec_skip_iso_check_hier_compare
+                 root  wlec_skip_lvl_check_hier_compare
+                 root  wlec_verbose
+            subdesign  allow_csa_subdesign
+            subdesign  allow_sharing_subdesign
+            subdesign  allow_speculation_subdesign
+            subdesign  auto_ungroup_ok
+            subdesign  dp_perform_rewriting_operations
+
+Send us feedback at rc_feedback@cadence.com.
+================================================================================================================================================================
+
+Sourcing './rc-pat-only.tcl' (Thu Jan 29 21:44:12 +0000 2015)...
+  Setting attribute of root '/': 'lib_search_path' = /home/research/software/asic/kits/ams/H18/liberty/h18_1.8V
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 25.000000) in library 'h18_CORELIB_HV_TYP.lib'.
+        : The nominal operating condition represents either the nominal PVT values if specified in the library source, or the default PVT values (1.0, 1.0, 1.0).
+
+  Message Summary for Library h18_CORELIB_HV_TYP.lib:
+  ***************************************************
+  An unsupported construct was detected in this library. [LBR-40]: 2
+  Found 'statetable' group in cell. [LBR-83]: 4
+  Created nominal operating condition. [LBR-412]: 1
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 25.000000) in library 'h18_IOLIB_HV_TYP.lib'.
+
+  Message Summary for Library h18_IOLIB_HV_TYP.lib:
+  *************************************************
+  An unsupported construct was detected in this library. [LBR-40]: 2
+  Created nominal operating condition. [LBR-412]: 1
+ 
+Info    : Library Information. [LBR-415]
+        : Library: 'h18_CORELIB_HV_TYP.lib', Total cells: '473', Usable cells: '460', Unusable cells: '13'.
+	List of unusable cells: 'BUSHDX1_HV FILLCELLX1_HV FILLCELLX2_HV FILLCELLX4_HV FILLCELLX8_HV FILLCELLX16_HV FILLCELLX32_HV LGNX1_HV LGPX1_HV LGSNX1_HV ... and others.'
+        : The number of unusable cells that is listed depends on the setting of the 'information_level' root attribute. If set to a value less than 6, the list is limited to 10 unusable cells. If set to a value equal to or higher than 6, all unusable cells are listed.
+Info    : Library Information. [LBR-415]
+        : Library: 'h18_IOLIB_HV_TYP.lib', Total cells: '6', Usable cells: '0', Unusable cells: '6'.
+	List of unusable cells: 'IOPAD5V_20_HV IOPAD5V_3_HV IOPAD5V_8_HV IOPAD1V8_20_HV IOPAD1V8_3_HV IOPAD1V8_8_HV .'
+  Setting attribute of root '/': 'library' = h18_CORELIB_HV_TYP.lib h18_IOLIB_HV_TYP.lib
+  Setting attribute of root '/': 'information_level' = 2
+Info   : Enabled hdl_track_file_row_column attribute.
+       : Setting this attribute to 'true' can have an impact on the run time. Use this attribute only when filename, line number, and column information are needed in reports.
+  Setting attribute of root '/': 'hdl_track_filename_row_col' = true
+  Setting attribute of root '/': 'dp_postmap_upsize' = true
+Info    : Library Information. [LBR-415]
+        : Library: 'h18_CORELIB_HV_TYP.lib', Total cells: '473', Usable cells: '460', Unusable cells: '13'.
+	List of unusable cells: 'BUSHDX1_HV FILLCELLX1_HV FILLCELLX2_HV FILLCELLX4_HV FILLCELLX8_HV FILLCELLX16_HV FILLCELLX32_HV LGNX1_HV LGPX1_HV LGSNX1_HV ... and others.'
+Info    : Library Information. [LBR-415]
+        : Library: 'h18_IOLIB_HV_TYP.lib', Total cells: '6', Usable cells: '0', Unusable cells: '6'.
+	List of unusable cells: 'IOPAD5V_20_HV IOPAD5V_3_HV IOPAD5V_8_HV IOPAD1V8_20_HV IOPAD1V8_3_HV IOPAD1V8_8_HV .'
+  Libraries have 377 usable logic and 81 usable sequential lib-cells.
+  Elaborating top-level block 'pat' from file 'pat.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'pat' with default parameters value.
+    Elaborating block 'data_mem' from file 'pat.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'data_mem' with default parameters value.
+    Elaborating block 'program_counter' from file 'pat.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'program_counter' with default parameters value.
+    Elaborating block 'pc_inc' from file 'pat.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'pc_inc' with default parameters value.
+    Elaborating block 'pc_add_signed' from file 'pat.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'pc_add_signed' with default parameters value.
+    Elaborating block 'alu' from file 'pat.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'alu' with default parameters value.
+    Elaborating block 'shifter' from file 'pat.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'shifter' with default parameters value.
+Info    : Unused module input port. [CDFG-500]
+        : Input port 'op_shro' is not used in module 'shifter' in file 'pat.sv' on line 647.
+        : The value of the input port is not used within the design.
+    Elaborating block 'adder' from file 'pat.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'adder' with default parameters value.
+    Elaborating block 'subtractor' from file 'pat.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'subtractor' with default parameters value.
+    Elaborating block 'orer' from file 'pat.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'orer' with default parameters value.
+    Elaborating block 'ander' from file 'pat.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'ander' with default parameters value.
+    Elaborating block 'negator' from file 'pat.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'negator' with default parameters value.
+Info    : Unused module input port. [CDFG-500]
+        : Input port 'op_addsub' is not used in module 'alu' in file 'pat.sv' on line 743.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'instruction_4' in module 'pat' in file 'pat.sv' on line 439.
+        : A flip-flop or latch that was inferred for an unused signal or variable was removed. Use 'set_attribute hdl_preserve_unused_registers true /' to preserve the flip-flop or latch.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'immediate_all_regd' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'condition_decoded' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'immediate_value_2' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'immediate_value_3' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'source1_value_2' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'source1_value_3' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'source2_value_2' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'source2_value_3' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'op_ldi_regd' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'op_setsp_regd' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'op_bf_regd' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'op_in_regd' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'op_out_regd' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'op_test_regd' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'op_nop_regd' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'data_regd' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'data_regd_2' in module 'pat' in file 'pat.sv' on line 439.
+Warning : Undriven module output port. [ELABUTL-123]
+        : Undriven bits of output port 'outputs[2]' in module 'pat' in file 'pat.sv' on line 39, column 34.
+        : Use the 'hdl_undriven_output_port_value' attribute to control treatment of undriven output port during elaboration.
+Warning : Undriven module output port. [ELABUTL-123]
+        : Undriven bits of output port 'outputs[1]' in module 'pat' in file 'pat.sv' on line 39, column 34.
+  Done elaborating 'pat'.
+  Setting attribute of port 'clk': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'reset': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[22]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[21]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[20]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[19]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[18]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[17]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[16]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[15]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[14]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[13]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[12]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[11]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[10]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[9]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[8]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[7]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[6]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[5]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[4]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[3]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[2]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[1]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'instruction_in[0]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_low[7]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_low[6]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_low[5]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_low[4]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_low[3]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_low[2]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_low[1]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_low[0]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_high[7]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_high[6]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_high[5]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_high[4]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_high[3]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_high[2]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_high[1]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'field_in_high[0]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[2][7]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[2][6]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[2][5]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[2][4]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[2][3]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[2][2]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[2][1]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[2][0]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[1][7]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[1][6]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[1][5]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[1][4]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[1][3]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[1][2]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[1][1]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[1][0]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[0][7]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[0][6]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[0][5]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[0][4]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[0][3]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[0][2]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[0][1]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'inputs[0][0]': 'external_driver' = /libraries/h18_CORELIB_HV_TYP/libcells/INVX2_HV/Q
+  Setting attribute of port 'pc[9]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'pc[8]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'pc[7]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'pc[6]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'pc[5]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'pc[4]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'pc[3]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'pc[2]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'pc[1]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'pc[0]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'jump': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'bufp[2]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'bufp[1]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'bufp[0]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'fieldp[4]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'fieldp[3]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'fieldp[2]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'fieldp[1]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'fieldp[0]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'fieldwp[4]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'fieldwp[3]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'fieldwp[2]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'fieldwp[1]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'fieldwp[0]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'field_write_en_low': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'field_write_en_high': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'field_out[7]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'field_out[6]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'field_out[5]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'field_out[4]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'field_out[3]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'field_out[2]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'field_out[1]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'field_out[0]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[2][7]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[2][6]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[2][5]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[2][4]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[2][3]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[2][2]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[2][1]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[2][0]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[1][7]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[1][6]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[1][5]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[1][4]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[1][3]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[1][2]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[1][1]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[1][0]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[0][7]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[0][6]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[0][5]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[0][4]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[0][3]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[0][2]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[0][1]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of port 'outputs[0][0]': 'external_pin_cap' = 10.0 10.0
+  Setting attribute of instance 'thePC': 'ungroup_ok' = false
+  Setting attribute of root '/': 'optimize_merge_flops' = true
+  Setting attribute of instance 'field_out_reg[0]': 'optimize_merge_seq' = false
+  Setting attribute of instance 'field_out_reg[1]': 'optimize_merge_seq' = false
+  Setting attribute of instance 'field_out_reg[2]': 'optimize_merge_seq' = false
+  Setting attribute of instance 'field_out_reg[3]': 'optimize_merge_seq' = false
+  Setting attribute of instance 'field_out_reg[4]': 'optimize_merge_seq' = false
+  Setting attribute of instance 'field_out_reg[5]': 'optimize_merge_seq' = false
+  Setting attribute of instance 'field_out_reg[6]': 'optimize_merge_seq' = false
+  Setting attribute of instance 'field_out_reg[7]': 'optimize_merge_seq' = false
+  Setting attribute of instance 'field_out_reg[0]': 'dft_dont_scan' = false
+  Setting attribute of instance 'field_out_reg[1]': 'dft_dont_scan' = false
+  Setting attribute of instance 'field_out_reg[2]': 'dft_dont_scan' = false
+  Setting attribute of instance 'field_out_reg[3]': 'dft_dont_scan' = false
+  Setting attribute of instance 'field_out_reg[4]': 'dft_dont_scan' = false
+  Setting attribute of instance 'field_out_reg[5]': 'dft_dont_scan' = false
+  Setting attribute of instance 'field_out_reg[6]': 'dft_dont_scan' = false
+  Setting attribute of instance 'field_out_reg[7]': 'dft_dont_scan' = false
+  Setting attribute of instance 'data_out_reg[0]': 'dft_dont_scan' = true
+  Setting attribute of instance 'data_out_reg[1]': 'dft_dont_scan' = true
+  Setting attribute of instance 'data_out_reg[2]': 'dft_dont_scan' = true
+  Setting attribute of instance 'data_out_reg[3]': 'dft_dont_scan' = true
+  Setting attribute of instance 'data_out_reg[4]': 'dft_dont_scan' = true
+  Setting attribute of instance 'data_out_reg[5]': 'dft_dont_scan' = true
+  Setting attribute of instance 'data_out_reg[6]': 'dft_dont_scan' = true
+  Setting attribute of instance 'data_out_reg[7]': 'dft_dont_scan' = true
+can't read "insertScanChain": no such variable
+Encountered problems processing file: rc-pat-only.tcl
+rc:/designs/pat> 
+rc:/designs/pat> resetg
+invalid command name "resetg"
+rc:/designs/pat> reset
+ambiguous command name "reset": reset_attribute reset_design reset_opcg_equivalent reset_scan_equivalent
+rc:/designs/pat> exitr
+invalid command name "exitr"
+rc:/designs/pat> exit
+Normal exit.
