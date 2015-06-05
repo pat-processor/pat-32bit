@@ -1,0 +1,99 @@
+# PPCMD 1 
+# setViaGenMode -viarule_preference generated -invoke_verifyGeometry true
+# 5 
+# 0 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 1 
+
+# PPCMD 2 
+# sroute -connect { blockPin padPin padRing corePin } -layerChangeRange { M1 AM } -blockPinTarget { nearestRingStripe nearestTarget } -padPinPortConnect { allPort oneGeom } -checkAlignedSecondaryPin 1 -blockPin useLef -allowJogging 1 -crossoverViaBottomLayer M1 -allowLayerChange 1 -targetViaTopLayer AM -crossoverViaTopLayer AM -targetViaBottomLayer M1 -nets { gnd! vdd! }
+# 4 
+# 16 
+# 0 
+# 0 
+# 0 
+# 0 
+# SELECTED_OBJECTS 
+# selectObject Module {theCore}
+# END_SELECTED_OBJECTS 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 2 
+
+# PPCMD 3 
+# addStripe -block_ring_top_layer_limit AM -max_same_layer_jog_length 10 -padcore_ring_bottom_layer_limit MT -set_to_set_distance 100 -stacked_via_top_layer AM -padcore_ring_top_layer_limit AM -spacing 5 -merge_stripes_value 4.9 -layer AM -block_ring_bottom_layer_limit MT -width 10 -nets {gnd! vdd!} -stacked_via_bottom_layer M1
+# 3 
+# 2 
+# 1 
+# 0 
+# 0 
+# 2 
+# SELECTED_OBJECTS 
+# selectObject Module {theCore}
+# END_SELECTED_OBJECTS 
+# BOX_LIST 
+# 5500 170140 765180 779180 0 
+# 30500 195140 740180 754180 0 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# vdd! 10000 6 0 65400 735450 100000 0 0 
+# gnd! 10000 6 0 50400 735450 100000 0 0 
+# END_NET_INFO_LIST 
+# END_PPCMD 3 
+
+# PPCMD 4 
+# addRing -stacked_via_top_layer AM -around core -jog_distance 4.9 -threshold 4.9 -nets {gnd! vdd!} -stacked_via_bottom_layer M1 -layer {bottom M1 top M1 right AM left AM} -width {left 15 bottom 15 top 15 right 15} -spacing 10 -offset 4.9 -layer_bottom M1 -layer_top M1 -layer_right AM -layer_left AM -width_left 15 -width_bottom 15 -width_top 15 -width_right 15 -spacing_top {10} -spacing_bottom {10} -spacing_left {10} -spacing_right {10} -offset_top {4.9} -offset_bottom {4.9} -offset_left {4.9} -offset_right {4.9}
+# 2 
+# 32 
+# 1 
+# 0 
+# 0 
+# 0 
+# SELECTED_OBJECTS 
+# selectObject Module {theCore}
+# END_SELECTED_OBJECTS 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# vdd! 15000 1 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 392840 177640 392840 786680 
+# END_RING_PT_INFO_LIST 
+# vdd! 15000 6 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 13000 482160 772680 482160 
+# END_RING_PT_INFO_LIST 
+# gnd! 15000 1 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 392840 202640 392840 761680 
+# END_RING_PT_INFO_LIST 
+# gnd! 15000 6 1 0 0 0 0 0 
+# RING_PT_INFO_LIST 
+# 38000 482160 747680 482160 
+# END_RING_PT_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 4 
+
+# PPCMD 5 
+# setViaGenMode -viarule_preference generated -invoke_verifyGeometry true
+# 1 
+# 0 
+# 0 
+# 0 
+# 0 
+# 0 
+# BOX_LIST 
+# END_BOX_LIST 
+# NET_INFO_LIST 
+# END_NET_INFO_LIST 
+# END_PPCMD 5 
+
